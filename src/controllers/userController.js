@@ -2,6 +2,10 @@ import User from "../models/User.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 
+export const testUserController = (req, res) => {
+    res.json({ message: "User controller is working!" });
+};
+
 export const register = async (req, res) => {
     try {
         const {name, email, user, password} = req.body;

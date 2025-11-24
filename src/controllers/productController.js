@@ -1,5 +1,9 @@
 import Product from "../models/Products.js";
 
+export const testProductController = (req, res) => {
+    res.json({ message: "Product controller is working!" });
+};
+
 //Crear producto
 export const createProduct = async (req, res) => {
     try {

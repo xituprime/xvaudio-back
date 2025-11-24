@@ -2,6 +2,7 @@ import express from 'express';
 import { upload } from '../middlewares/upload.js';
 
 import{
+    testProductController,
     createProduct,
     getProducts,
     getProductById,
@@ -10,6 +11,9 @@ import{
 } from '../controllers/productController.js';
 
 const router = express.Router();
+
+// Ruta de prueba del controlador de productos
+router.get('/test', testProductController);
 
 // Crear producto con subida de imagenes
 router.post('/', upload.array('images', 10), createProduct); // Maximo 10 imagenes
